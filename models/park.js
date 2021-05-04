@@ -44,5 +44,23 @@ Park.prototype.findTotalVisitorsPerDay = function(){
     return total;
 }
 
+Park.prototype.findTotalVisitorsPerYear = function(){
+    let total = 0;
+    for (let item of this.dinosaurCollection){
+        total += item.guestsAttractedPerDay;
+    }
+    total = total * 365
+    return total;
+}
+
+Park.prototype.findTotalRevenuePerYear = function(){
+    let guests = 0;
+    for (let item of this.dinosaurCollection){
+        guests += item.guestsAttractedPerDay;
+    }
+    total = guests * 365 * this.ticketPrice
+    return total;
+}
+
   module.exports = Park;
   
