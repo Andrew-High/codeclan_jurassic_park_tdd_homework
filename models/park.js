@@ -16,5 +16,15 @@ Park.prototype.removeDinosaur = function(dinosaur){
     }
 }
 
+Park.prototype.checkHighestVisitorDinosaur = function(){
+    let result = this.dinosaurCollection[0];
+    for (let item of this.dinosaurCollection){
+        if (item.guestsAttractedPerDay > result.guestsAttractedPerDay){
+            result = item;
+        }
+    }
+    return result;
+}
+
   module.exports = Park;
   
