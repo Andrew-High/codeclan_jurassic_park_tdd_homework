@@ -29,7 +29,7 @@ describe('Park', function() {
   });
 
   it('should be able to add a dinosaur to its collection', function(){
-    park.addDinosaurToCollection(dinosaur1);
+    park.addDinosaur(dinosaur1);
     const actual = park.dinosaurCollection.length
     assert.strictEqual(actual, 1)
   });
