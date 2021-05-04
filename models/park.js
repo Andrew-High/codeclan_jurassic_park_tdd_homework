@@ -26,5 +26,23 @@ Park.prototype.checkHighestVisitorDinosaur = function(){
     return result;
 }
 
+Park.prototype.findDinosaursOfSpecies = function(species){
+    let results = [];
+    for (let item of this.dinosaurCollection){
+        if (item.species === species){
+            results.push(item)
+        }
+    }
+    return results
+}
+
+Park.prototype.findTotalVisitorsPerDay = function(){
+    let total = 0;
+    for (let item of this.dinosaurCollection){
+        total += item.guestsAttractedPerDay;
+    }
+    return total;
+}
+
   module.exports = Park;
   
